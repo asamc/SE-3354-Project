@@ -1,5 +1,5 @@
 //Created by Asa Mcdaniel
-//Edited by William Bell
+//Edited by William Bell, Mathew Hoang
 
 package paintshop;
 
