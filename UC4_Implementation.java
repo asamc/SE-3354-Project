@@ -1,15 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package uc1_implementation;
+//Mathew Hoang
+package paintshop;
 
-/**
- *
- * @author SunOfAGambolier
- * @editor Mathew H
- */
 public class UC4_Implementation {
 
     public static Website ws;
