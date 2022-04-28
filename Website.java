@@ -1,5 +1,5 @@
 //Created by Asa Mcdaniel
-//Edited by William Bell, Mathew Hoang
+//Edited by William Bell, Mathew Hoang, Sai Motukuri
 package paintshop;
 
 public class Website {
@@ -14,7 +14,7 @@ public class Website {
         return ret;                                             //Returns 0 if entry was successfully submitted, 1 if title was already taken
     }
     
-    public project deleteEntry(int index, String reason) {			//remove a project from db, returns deleted project
+    public project deleteEntry(int index, String reason) {			//delete a project from db, returns deleted project
     	project p = db.getEntry(index);
     	
     	if (p != null) {
@@ -29,7 +29,13 @@ public class Website {
     		return null;
     }
     
-    public Project getProject(String title){
+    public int RemoveEntInDB(project projIn){                       //
+        int ret = db.removeEntry(projIn);                                       //Sends a token to end the waiting status of the Database
+        db.status--;                                            //Returns 0 if the entry was successfully deleted, 1 if the title was not found
+        return ret;
+    }
+    
+    public project getProject(String title){
         return db.getProject(title);
     }
 }
