@@ -2,10 +2,6 @@
 //Edited by William Bell
 package uc1_implementation;
 
-/**
- *
- * @author SunOfAGambolier
- */
 public class Website {
     Database db;
     public Website(){
