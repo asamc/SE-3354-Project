@@ -1,6 +1,7 @@
-//William Bell
+//Created by Asa Mcdaniel
+//Edited by William Bell
 
-package uc2_implementation;
+package paintshop;
 
 import java.util.ArrayList; // import the ArrayList class
 
