@@ -1,5 +1,5 @@
-Created by Asa Mcdaniel
-Edited by William Bell
+//Created by Asa Mcdaniel
+//Edited by William Bell
 package uc1_implementation;
 
 /**
