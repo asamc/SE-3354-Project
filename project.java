@@ -1,7 +1,7 @@
 //Created by Asa Mcdaniel
-//Edited by William Bell
+//Edited by William Bell, Mathew Hoang
 
-package uc2_implementation;
+package paintshop;
 
 import java.util.ArrayList; // import the ArrayList class
 
@@ -31,6 +31,10 @@ public class project {
     
     public String getTitle(){
         return title;
+    }
+    
+    public void editData(String projDataIn){
+        projData = projDataIn;
     }
     
     public int addFeedback(String f) {		//adds feedback to fb
