@@ -1,5 +1,5 @@
 
-package uc3_implementation;
+package paintshop;
 
 public class UC3_Implementation {
 
