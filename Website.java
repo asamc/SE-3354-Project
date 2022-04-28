@@ -1,8 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+Created by Asa Mcdaniel
+Edited by William Bell
 package uc1_implementation;
 
 /**
@@ -13,6 +10,21 @@ public class Website {
     Database db;
     public Website(){
         db = new Database();
+    }
+    
+    public project deleteEntry(int index, String reason) {			//remove a project from db, returns deleted project
+    	project p = db.getEntry(index);
+    	
+    	if (p != null) {
+    		String f = "Project deleted. Reason for deletion: " + reason + ".";
+    		p.addFeedback(f);
+    		
+    		db.removeEntry(index);
+    		
+    		return p;
+    	}
+    	else
+    		return null;
     }
     
     public int ReqEntInDB(project projIn){
