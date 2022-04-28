@@ -1,10 +1,8 @@
 //Created by Asa Mcdaniel
 //Edited by William Bell, Mathew Hoang, Sai Motukuri
-
 package paintshop;
 
 import java.util.ArrayList; // import the ArrayList class
-
 
 public class Database {
 
@@ -16,8 +14,6 @@ public class Database {
         status = 0;
     }
     
-    
-
     public int addEntry(project projIn) {                                       //Returns 0 if entry was successfully submitted, 1 if title was already taken
         status++;                                                               //add on a waiting token for confirmation of the report
         if (!(db.isEmpty())) {
@@ -27,7 +23,6 @@ public class Database {
                 }
             }
         }
-
         db.add(projIn);
         return 0;
     }
@@ -49,5 +44,4 @@ public class Database {
     	else
     		return -1;
     }
-
 }
