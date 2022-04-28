@@ -13,6 +13,18 @@ public class Website {
         db.status--;                                                            //Sends a token to end the waiting status of the Database
         return ret;                                             //Returns 0 if entry was successfully submitted, 1 if title was already taken
     }
+
+    public project giveFeedback(int index, String f) {				//adds the feedback string to the projects record of feedback
+        project p = db.getEntry(index);
+
+        if (p != null) {
+            p.addFeedback(f);
+
+            return p;
+        }
+        else
+            return null;
+    }
     
     public project deleteEntry(int index, String reason) {			//delete a project from db, returns deleted project
     	project p = db.getEntry(index);
@@ -21,7 +33,7 @@ public class Website {
     		String f = "Project deleted. Reason for deletion: " + reason + ".";
     		p.addFeedback(f);
     		
-    		db.removeEntry(index);
+    		db.removeEntry(p);
     		
     		return p;
     	}
@@ -36,6 +48,6 @@ public class Website {
     }
     
     public project getProject(String title){
-        return db.getProject(title);
+        return db.getEntry(title);
     }
 }

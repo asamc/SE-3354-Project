@@ -11,6 +11,8 @@ public class project {
     public String[] tags;  //Tags for the project
     public ArrayList<String> fb;    //List of given feedback 
     public String desc;    //Description of the project
+
+    public String projData;
     public int pm;         //Permissions for the project
 
     public project() { // Basic Constructor

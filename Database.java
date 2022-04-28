@@ -34,14 +34,26 @@ public class Database {
     	else
     		return null;
     }
+
+    public project getEntry(String title) {										//returns the project at index
+        if (!(db.isEmpty())) {
+            for (int i = 0; i < db.size(); i++) {
+                if (title.equals(db.get(i).getTitle())) {
+                    return db.get(i);                                                       //Another project already has that title
+                }
+            }
+        }
+        return null;
+    }
     
-    public int removeEntry(int index) {											//removes the project at index
-    	if (index < db.size()) {
-    		db.remove(index);
-    		
-    		return index;
-    	}
-    	else
-    		return -1;
+    public int removeEntry(project projIn) {											//removes the project at index
+        if (!(db.isEmpty())) {
+            for (int i = 0; i < db.size(); i++) {
+                if (projIn.getTitle().equals(db.get(i).getTitle())) {
+                    return i;                                                       //Another project already has that title
+                }
+            }
+        }
+        return -1;
     }
 }
